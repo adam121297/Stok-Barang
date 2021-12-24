@@ -38,7 +38,7 @@
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">
-        <p class="login-box-msg">Sign in to start your session</p>
+        <p class="login-box-msg">Masuk untuk menggunakan Aqua Fish Apps</p>
 
         <form method="POST" action="{{ route('login') }}">
             @csrf
@@ -69,7 +69,7 @@
             </div>
             <div class="row">
                 <div class="col-xs-12">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">Masuk</button>
                 </div>
                 <!-- /.col -->
             </div>
@@ -78,7 +78,7 @@
                 <div class="col-xs-12">
                     <div class="checkbox icheck">
                         <label>
-                            <input type="checkbox" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}> &nbsp; Remember Me
+                            <input type="checkbox" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}> &nbsp; Ingat saya
                         </label>
                     </div>
                 </div>
@@ -86,13 +86,13 @@
         </form>
         <!-- /.social-auth-links -->
         <div class="social-auth-links text-center">
-            <p>- OR -</p>
+            <p>- Atau -</p>
             @if (Route::has('password.request'))
-                <a href="{{ route('password.request') }}" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-fw fa-key"></i> Forgot Password ?</a>
+                <a href="{{ route('password.request') }}" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-fw fa-key"></i> Lupa Password ?</a>
             @endif
 
             @if (Route::has('register'))
-                <a href="{{ route('register') }}" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-fw fa-user-plus"></i> Sign Up</a>
+                <a href="{{ route('register') }}" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-fw fa-user-plus"></i>Daftar Sekarang</a>
             @endif
         </div>
 
