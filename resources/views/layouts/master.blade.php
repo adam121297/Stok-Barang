@@ -170,7 +170,7 @@ desired effect
             Anything you want
         </div>
         <!-- Default to the left -->
-        <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved. | Repost by <a href='https://stokcoding.com/' title='StokCoding.com' target='_blank'>StokCoding.com</a>
+        <strong>Copyright &copy; 2021 <a href="#">Company</a>.</strong> All rights reserved.
         
     </footer>
 
