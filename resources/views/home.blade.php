@@ -136,9 +136,9 @@
         <div class="box">
             <div class="box-body">
             <div class="callout callout-success">
-                <h4>Success</h4>
+                <h4>Selamat</h4>
 
-                <p>{{ session('status') }} You are logged in!</p>
+                <p>{{ session('status') }} Anda berhasil masuk!</p>
             </div>
             </div>
         </div>
