@@ -12,7 +12,7 @@
             <div class="inner">
                 <h3>{{ \App\User::count() }}</h3>
 
-                <p>Users</p>
+                <p>Pengguna</p>
             </div>
             <div class="icon">
                 <i class="ion ion-bag"></i>
@@ -27,7 +27,7 @@
             <div class="inner">
                 <h3>{{ \App\Category::count() }}<sup style="font-size: 20px"></sup></h3>
 
-                <p>Category</p>
+                <p>Kategori</p>
             </div>
             <div class="icon">
                 <i class="ion ion-stats-bars"></i>
@@ -41,7 +41,7 @@
         <div class="small-box bg-yellow">
             <div class="inner">
                 <h3>{{ \App\Product::count() }}</h3>
-                <p>Product</p>
+                <p>Produk</p>
             </div>
             <div class="icon">
                 <i class="ion ion-person-add"></i>
@@ -56,7 +56,7 @@
             <div class="inner">
                 <h3>{{ \App\Customer::count() }}</h3>
 
-                <p>Customer</p>
+                <p>Pelanggan</p>
             </div>
             <div class="icon">
                 <i class="ion ion-pie-graph"></i>
@@ -76,7 +76,7 @@
             <div class="inner">
                 <h3>{{ \App\Sale::count() }}</h3>
 
-                <p>Sales</p>
+                <p>Penjualan</p>
             </div>
             <div class="icon">
                 <i class="ion ion-bag"></i>
@@ -91,7 +91,7 @@
             <div class="inner">
                 <h3>{{ \App\Supplier::count() }}<sup style="font-size: 20px"></sup></h3>
 
-                <p>Supplier</p>
+                <p>Pemasok</p>
             </div>
             <div class="icon">
                 <i class="ion ion-stats-bars"></i>
@@ -106,7 +106,7 @@
             <div class="inner">
                 <h3>{{ \App\Product_Masuk::count() }}</h3>
 
-                <p>Product In</p>
+                <p>Produk Masuk</p>
             </div>
             <div class="icon">
                 <i class="ion ion-person-add"></i>
@@ -121,7 +121,7 @@
             <div class="inner">
                 <h3>{{ \App\Product_Keluar::count()  }}</h3>
 
-                <p>Product Out</p>
+                <p>Produk Keluar</p>
             </div>
             <div class="icon">
                 <i class="ion ion-pie-graph"></i>
