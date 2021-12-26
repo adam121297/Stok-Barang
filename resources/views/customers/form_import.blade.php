@@ -4,7 +4,7 @@
         <!-- general form elements -->
         <div class="box box-primary">
             <div class="box-header with-border">
-                <h3 class="box-title">Import Data Customer</h3>
+                <h3 class="box-title">Impor Data Pelanggan</h3>
                 <br><br>
                 @if(session('success'))
                     <div class="alert alert-success alert-dismissible ">
@@ -29,7 +29,7 @@
                 <div class="box-body">
                     <div class="form-group">
                         <label for="exampleInputFile" >
-                            Input File
+                            Masukan File
                         </label>
                         <input type="file" id="file" name="file">
                         <p class="text-danger">{{ $errors->first('file') }}</p>
@@ -40,7 +40,7 @@
                 <!-- /.box-body -->
 
                 <div class="box-footer">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Kirimkan</button>
                 </div>
 
                 <div class="box-body">
