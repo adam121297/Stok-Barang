@@ -15,15 +15,15 @@
     <div class="box">
 
         <div class="box-header">
-            <h3 class="box-title">Data Products In</h3>
+            <h3 class="box-title">Data Produk Masuk</h3>
 
 
         </div>
 
         <div class="box-header">
-            <a onclick="addForm()" class="btn btn-primary" >Add Products In</a>
-            <a href="{{ route('exportPDF.productMasukAll') }}" class="btn btn-danger">Export PDF</a>
-            <a href="{{ route('exportExcel.productMasukAll') }}" class="btn btn-success">Export Excel</a>
+            <a onclick="addForm()" class="btn btn-primary" >Tambahkan Produk Masuk</a>
+            <a href="{{ route('exportPDF.productMasukAll') }}" class="btn btn-danger">Ekspor PDF</a>
+            <a href="{{ route('exportExcel.productMasukAll') }}" class="btn btn-success">Ekspor Excel</a>
         </div>
 
 
@@ -35,9 +35,9 @@
                 <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Products</th>
-                    <th>Supplier</th>
-                    <th>QTY</th>
+                    <th>Produk</th>
+                    <th>Pemasok</th>
+                    <th>Jumlah</th>
                     <th>Tanggal Masuk</th>
                     <th></th>
                 </tr>
@@ -55,9 +55,9 @@
         </div>
 
     {{--<div class="box-header">--}}
-    {{--<a onclick="addForm()" class="btn btn-primary" >Add Products Out</a>--}}
-    {{--<a href="{{ route('exportPDF.productKeluarAll') }}" class="btn btn-danger">Export PDF</a>--}}
-    {{--<a href="{{ route('exportExcel.productKeluarAll') }}" class="btn btn-success">Export Excel</a>--}}
+    {{--<a onclick="addForm()" class="btn btn-primary" >Tambahkan Produk Keluar</a>--}}
+    {{--<a href="{{ route('exportPDF.productKeluarAll') }}" class="btn btn-danger">Ekspor PDF</a>--}}
+    {{--<a href="{{ route('exportExcel.productKeluarAll') }}" class="btn btn-success">Ekspor Excel</a>--}}
     {{--</div>--}}
 
     <!-- /.box-header -->
@@ -66,11 +66,11 @@
                 <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Products</th>
-                    <th>Supplier</th>
-                    <th>QTY</th>
+                    <th>Produk</th>
+                    <th>Pemasok</th>
+                    <th>Jumlah</th>
                     <th>Tanggal Pembelian</th>
-                    <th>Export Invoice</th>
+                    <th>Ekspor Faktur</th>
                 </tr>
                 </thead>
 
