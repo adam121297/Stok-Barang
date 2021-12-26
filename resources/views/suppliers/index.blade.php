@@ -10,13 +10,13 @@
     <div class="box">
 
         <div class="box-header">
-            <h3 class="box-title">Data Suppliers</h3>
+            <h3 class="box-title">Data Pemasok</h3>
         </div>
 
         <div class="box-header">
-            <a onclick="addForm()" class="btn btn-primary" >Add Customers</a>
-            <a href="{{ route('exportPDF.suppliersAll') }}" class="btn btn-danger">Export PDF</a>
-            <a href="{{ route('exportExcel.suppliersAll') }}" class="btn btn-success">Export Excel</a>
+            <a onclick="addForm()" class="btn btn-primary" >Tambahkan Pemasok</a>
+            <a href="{{ route('exportPDF.suppliersAll') }}" class="btn btn-danger">Ekspor PDF</a>
+            <a href="{{ route('exportExcel.suppliersAll') }}" class="btn btn-success">Ekspor Excel</a>
         </div>
 
 
@@ -26,10 +26,10 @@
                 <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Name</th>
-                    <th>Address</th>
+                    <th>Nama</th>
+                    <th>Alamat</th>
                     <th>Email</th>
-                    <th>Phone</th>
+                    <th>No.HP</th>
                     <th></th>
                 </tr>
                 </thead>
