@@ -10,9 +10,9 @@
     <div class="box">
 
         <div class="box-header">
-            <h3 class="box-title">Data Products</h3>
+            <h3 class="box-title">Produk Data</h3>
 
-            <a onclick="addForm()" class="btn btn-primary pull-right" style="margin-top: -8px;">Add Products</a>
+            <a onclick="addForm()" class="btn btn-primary pull-right" style="margin-top: -8px;">Tambahkan Produk</a>
         </div>
 
 
@@ -24,9 +24,9 @@
                     <th>ID</th>
                     <th>Nama</th>
                     <th>Harga</th>
-                    <th>QTY</th>
-                    <th>Image</th>
-                    <th>Category</th>
+                    <th>Jumlah</th>
+                    <th>Gambar</th>
+                    <th>Kategori</th>
                     <th></th>
                 </tr>
                 </thead>
