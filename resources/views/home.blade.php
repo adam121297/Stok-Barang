@@ -70,24 +70,10 @@
 
 
 <div class="row">
-    <div class="col-lg-3 col-xs-6">
+    <!-- ./col -->
+    <div class="col-lg-4 col-xs-6">
         <!-- small box -->
         <div class="small-box bg-blue">
-            <div class="inner">
-                <h3>{{ \App\Sale::count() }}</h3>
-
-                <p>Penjualan</p>
-            </div>
-            <div class="icon">
-                <i class="ion ion-bag"></i>
-            </div>
-            <a href="{{ route('sales.index') }}" class="small-box-footer">Detail <i class="fa fa-arrow-circle-right"></i></a>
-        </div>
-    </div>
-    <!-- ./col -->
-    <div class="col-lg-3 col-xs-6">
-        <!-- small box -->
-        <div class="small-box bg-teal">
             <div class="inner">
                 <h3>{{ \App\Supplier::count() }}<sup style="font-size: 20px"></sup></h3>
 
@@ -100,7 +86,7 @@
         </div>
     </div>
     <!-- ./col -->
-    <div class="col-lg-3 col-xs-6">
+    <div class="col-lg-4 col-xs-6">
         <!-- small box -->
         <div class="small-box bg-purple">
             <div class="inner">
@@ -115,7 +101,7 @@
         </div>
     </div>
     <!-- ./col -->
-    <div class="col-lg-3 col-xs-6">
+    <div class="col-lg-4 col-xs-6">
         <!-- small box -->
         <div class="small-box bg-maroon">
             <div class="inner">
