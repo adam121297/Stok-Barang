@@ -31,15 +31,15 @@
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">AQUA FISH NAVIGASI</li>
             <!-- Optionally, you can add icons to the links -->
-            <li class="active"><a href="{{ url('/home') }}"><i class="fa fa-link"></i> <span>Dashboard</span></a></li>
-            <li class="active"><a href="{{ route('categories.index') }}"><i class="fa fa-link"></i> <span>Kategori</span></a></li>
-            <li class="active"><a href="{{ route('products.index') }}"><i class="fa fa-link"></i> <span>Produk</span></a></li>
-            <li class="active"><a href="{{ route('customers.index') }}"><i class="fa fa-link"></i> <span>Pelanggan</span></a></li>
+            <li class="active"><a href="{{ url('/home') }}"><i class="ion ion-monitor"></i> <span>Dashboard</span></a></li>
+            <li class="active"><a href="{{ route('categories.index') }}"><i class="ion ion-grid"></i> <span>Kategori</span></a></li>
+            <li class="active"><a href="{{ route('products.index') }}"><i class="ion ion-briefcase"></i> <span>Produk</span></a></li>
+            <li class="active"><a href="{{ route('customers.index') }}"><i class="ion ion-person"></i> <span>Pelanggan</span></a></li>
             <li class="active"><a href="{{ route('pengguna.index') }}"><i class="fa fa-link"></i> <span>Pengguna</span></a></li>
             <!-- <li class="active"><a href="{{ route('sales.index') }}"><i class="fa fa-link"></i> <span>Sales</span></a></li> -->
-            <li class="active"><a href="{{ route('suppliers.index') }}"><i class="fa fa-link"></i> <span>Pemasok</span></a></li>
-            <li class="active"><a href="{{ route('productsOut.index') }}"><i class="fa fa-link"></i> <span>Produk Keluar</span></a></li>
-            <li class="active"><a href="{{ route('productsIn.index') }}"><i class="fa fa-link"></i> <span>Produk Masuk</span></a></li>
+            <li class="active"><a href="{{ route('suppliers.index') }}"><i class="ion ion-man"></i> <span>Pemasok</span></a></li>
+            <li class="active"><a href="{{ route('productsOut.index') }}"><i class="ion ion-log-out"></i> <span>Produk Keluar</span></a></li>
+            <li class="active"><a href="{{ route('productsIn.index') }}"><i class="ion ion-log-in"></i> <span>Produk Masuk</span></a></li>
 
 
 
