@@ -15,7 +15,7 @@
                 <p>Pengguna</p>
             </div>
             <div class="icon">
-                <i class="ion ion-bag"></i>
+                <i class="ion ion-person-stalker"></i>
             </div>
             <a href="#" class="small-box-footer">Detail <i class="fa fa-arrow-circle-right"></i></a>
         </div>
@@ -30,7 +30,7 @@
                 <p>Kategori</p>
             </div>
             <div class="icon">
-                <i class="ion ion-stats-bars"></i>
+                <i class="ion ion-grid"></i>
             </div>
             <a href="{{ route('categories.index') }}" class="small-box-footer">Detail <i class="fa fa-arrow-circle-right"></i></a>
         </div>
@@ -44,7 +44,7 @@
                 <p>Produk</p>
             </div>
             <div class="icon">
-                <i class="ion ion-person-add"></i>
+                <i class="ion ion-briefcase"></i>
             </div>
             <a href="{{ route('products.index') }}" class="small-box-footer">Detail <i class="fa fa-arrow-circle-right"></i></a>
         </div>
@@ -59,7 +59,7 @@
                 <p>Pelanggan</p>
             </div>
             <div class="icon">
-                <i class="ion ion-pie-graph"></i>
+                <i class="ion ion-person"></i>
             </div>
             <a href="{{ route('customers.index') }}" class="small-box-footer">Detail <i class="fa fa-arrow-circle-right"></i></a>
         </div>
@@ -72,7 +72,7 @@
 <div class="row">
     <div class="col-lg-3 col-xs-6">
         <!-- small box -->
-        <div class="small-box bg-navy">
+        <div class="small-box bg-blue">
             <div class="inner">
                 <h3>{{ \App\Sale::count() }}</h3>
 
@@ -94,7 +94,7 @@
                 <p>Pemasok</p>
             </div>
             <div class="icon">
-                <i class="ion ion-stats-bars"></i>
+                <i class="ion ion-man"></i>
             </div>
             <a href="{{ route('suppliers.index') }}" class="small-box-footer">Detail <i class="fa fa-arrow-circle-right"></i></a>
         </div>
@@ -102,14 +102,14 @@
     <!-- ./col -->
     <div class="col-lg-3 col-xs-6">
         <!-- small box -->
-        <div class="small-box bg-maroon">
+        <div class="small-box bg-purple">
             <div class="inner">
                 <h3>{{ \App\Product_Masuk::count() }}</h3>
 
                 <p>Produk Masuk</p>
             </div>
             <div class="icon">
-                <i class="ion ion-person-add"></i>
+                <i class="ion ion-log-in"></i>
             </div>
             <a href="{{ route('productsIn.index') }}" class="small-box-footer">Detail <i class="fa fa-arrow-circle-right"></i></a>
         </div>
@@ -117,14 +117,14 @@
     <!-- ./col -->
     <div class="col-lg-3 col-xs-6">
         <!-- small box -->
-        <div class="small-box bg-gray">
+        <div class="small-box bg-maroon">
             <div class="inner">
                 <h3>{{ \App\Product_Keluar::count()  }}</h3>
 
                 <p>Produk Keluar</p>
             </div>
             <div class="icon">
-                <i class="ion ion-pie-graph"></i>
+                <i class="ion ion-log-out"></i>
             </div>
             <a href="{{ route('productsOut.index') }}" class="small-box-footer">Detail <i class="fa fa-arrow-circle-right"></i></a>
         </div>
