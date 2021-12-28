@@ -12,13 +12,13 @@
     <div class="box">
 
         <div class="box-header">
-            <h3 class="box-title">Data Pelanggan</h3>
+            <h3 class="box-title">Data Pengguna</h3>
         </div>
 
         <div class="box-header">
-            <a onclick="addForm()" class="btn btn-primary" >Tambahkan Pelanggan</a>
-            <a href="{{ route('exportPDF.customersAll') }}" class="btn btn-danger">Ekspor PDF</a>
-            <a href="{{ route('exportExcel.customersAll') }}" class="btn btn-success">Ekspor Excel</a>
+            <a onclick="addForm()" class="btn btn-primary" >Tambahkan Pengguna</a>
+            <!-- <a href="{{ route('exportPDF.customersAll') }}" class="btn btn-danger">Ekspor PDF</a>
+            <a href="{{ route('exportExcel.customersAll') }}" class="btn btn-success">Ekspor Excel</a> -->
         </div>
 
 
@@ -29,10 +29,9 @@
                 <tr>
                     <th>ID</th>
                     <th>Nama</th>
-                    <th>Alamat</th>
                     <th>Email</th>
-                    <th>No.HP</th>
-                    <th></th>
+                    <th>Status</th>
+                    <th>Aksi</th>
                 </tr>
                 </thead>
                 <tbody></tbody>
@@ -41,9 +40,7 @@
         <!-- /.box-body -->
     </div>
 
-    @include('customers.form_import')
-
-    @include('customers.form')
+    @include('pengguna.form')
 
 @endsection
 
@@ -76,13 +73,12 @@
         var table = $('#customer-table').DataTable({
             processing: true,
             serverSide: true,
-            ajax: "{{ route('api.customers') }}",
+            ajax: "{{ route('api.people') }}",
             columns: [
                 {data: 'id', name: 'id'},
-                {data: 'nama', name: 'nama'},
-                {data: 'alamat', name: 'alamat'},
+                {data: 'name', name: 'nama'},
                 {data: 'email', name: 'email'},
-                {data: 'telepon', name: 'telepon'},
+                {data: 'role', name: 'role'},
                 {data: 'action', name: 'action', orderable: false, searchable: false}
             ]
         });
@@ -92,7 +88,7 @@
             $('input[name=_method]').val('POST');
             $('#modal-form').modal('show');
             $('#modal-form form')[0].reset();
-            $('.modal-title').text('Add Customers');
+            $('.modal-title').text('Tambahkan Pengguna');
         }
 
         function editForm(id) {
@@ -105,13 +101,13 @@
                 dataType: "JSON",
                 success: function(data) {
                     $('#modal-form').modal('show');
-                    $('.modal-title').text('Edit 1');
+                    $('.modal-title').text('Edit Data Pengguna');
 
                     $('#id').val(data.id);
-                    $('#nama').val(data.nama);
-                    $('#alamat').val(data.alamat);
+                    $('#nama').val(data.name);
+                    $('#password').val(data.password);
                     $('#email').val(data.email);
-                    $('#telepon').val(data.telepon);
+                    $('#role').val(data.role);
                 },
                 error : function() {
                     alert("Nothing Data");
@@ -122,22 +118,23 @@
         function deleteData(id){
             var csrf_token = $('meta[name="csrf-token"]').attr('content');
             swal({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
+                title: 'Apakah kamu yakin?',
+                text: "Kamu tidak akan bisa mengembalikannya!",
                 type: 'warning',
                 showCancelButton: true,
                 cancelButtonColor: '#d33',
                 confirmButtonColor: '#3085d6',
-                confirmButtonText: 'Yes, delete it!'
+                confirmButtonText: 'Ya, Hapus permanen!',
+                cancelButtonText: 'Batalkan',
             }).then(function () {
                 $.ajax({
-                    url : "{{ url('customers') }}" + '/' + id,
+                    url : "{{ url('pengguna') }}" + '/' + id,
                     type : "POST",
                     data : {'_method' : 'DELETE', '_token' : csrf_token},
                     success : function(data) {
                         table.ajax.reload();
                         swal({
-                            title: 'Success!',
+                            title: 'Sukses!',
                             text: data.message,
                             type: 'success',
                             timer: '1500'
@@ -145,7 +142,7 @@
                     },
                     error : function () {
                         swal({
-                            title: 'Oops...',
+                            title: 'Gagal',
                             text: data.message,
                             type: 'error',
                             timer: '1500'
@@ -159,8 +156,8 @@
             $('#modal-form form').validator().on('submit', function (e) {
                 if (!e.isDefaultPrevented()){
                     var id = $('#id').val();
-                    if (save_method == 'add') url = "{{ url('customers') }}";
-                    else url = "{{ url('customers') . '/' }}" + id;
+                    if (save_method == 'add') url = "{{ url('pengguna') }}";
+                    else url = "{{ url('pengguna') . '/' }}" + id;
 
                     $.ajax({
                         url : url,

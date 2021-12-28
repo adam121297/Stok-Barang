@@ -31,6 +31,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/exportCategoriesAll','CategoryController@exportCategoriesAll')->name('exportPDF.categoriesAll');
     Route::get('/exportCategoriesAllExcel','CategoryController@exportExcel')->name('exportExcel.categoriesAll');
 
+    Route::resource('pengguna','PeopleController');
+    Route::get('/apiPeoples','PeopleController@apiPeoples')->name('api.people');
 
     Route::resource('customers','CustomerController');
     Route::get('/apiCustomers','CustomerController@apiCustomers')->name('api.customers');
@@ -65,4 +67,3 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/exportProductMasukAllExcel','ProductMasukController@exportExcel')->name('exportExcel.productMasukAll');
     Route::get('/exportProductMasuk/{id}','ProductMasukController@exportProductMasuk')->name('exportPDF.productMasuk');
 });
-

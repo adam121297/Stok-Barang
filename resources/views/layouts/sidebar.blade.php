@@ -35,6 +35,7 @@
             <li class="active"><a href="{{ route('categories.index') }}"><i class="fa fa-link"></i> <span>Kategori</span></a></li>
             <li class="active"><a href="{{ route('products.index') }}"><i class="fa fa-link"></i> <span>Produk</span></a></li>
             <li class="active"><a href="{{ route('customers.index') }}"><i class="fa fa-link"></i> <span>Pelanggan</span></a></li>
+            <li class="active"><a href="{{ route('pengguna.index') }}"><i class="fa fa-link"></i> <span>Pengguna</span></a></li>
             <!-- <li class="active"><a href="{{ route('sales.index') }}"><i class="fa fa-link"></i> <span>Sales</span></a></li> -->
             <li class="active"><a href="{{ route('suppliers.index') }}"><i class="fa fa-link"></i> <span>Pemasok</span></a></li>
             <li class="active"><a href="{{ route('productsOut.index') }}"><i class="fa fa-link"></i> <span>Produk Keluar</span></a></li>
