@@ -1,4 +1,4 @@
-<aside class="main-sidebar">
+<aside class="main-sidebar bg-danger">
 
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
@@ -35,7 +35,7 @@
             <li class="active"><a href="{{ route('categories.index') }}"><i class="ion ion-grid"></i> <span>Kategori</span></a></li>
             <li class="active"><a href="{{ route('products.index') }}"><i class="ion ion-briefcase"></i> <span>Produk</span></a></li>
             <li class="active"><a href="{{ route('customers.index') }}"><i class="ion ion-person"></i> <span>Pelanggan</span></a></li>
-            <li class="active"><a href="{{ route('pengguna.index') }}"><i class="ion-happy"></i> <span>Pengguna</span></a></li>
+            <li class="active"><a href="{{ route('pengguna.index') }}"><i class="ion ion-person-stalker"></i> <span>Pengguna</span></a></li>
             <!-- <li class="active"><a href="{{ route('sales.index') }}"><i class="fa fa-link"></i> <span>Sales</span></a></li> -->
             <li class="active"><a href="{{ route('suppliers.index') }}"><i class="ion ion-man"></i> <span>Pemasok</span></a></li>
             <li class="active"><a href="{{ route('productsOut.index') }}"><i class="ion ion-log-out"></i> <span>Produk Keluar</span></a></li>

@@ -126,7 +126,7 @@ desired effect
                     </li>
                     <!-- Control Sidebar Toggle Button -->
                     <li>
-                        
+
                     </li>
                 </ul>
             </div>
@@ -171,7 +171,7 @@ desired effect
         </div>
         <!-- Default to the left -->
         <strong>Copyright &copy; 2021 <a href="#">Company</a>.</strong> All rights reserved.
-        
+
     </footer>
 
     <!-- Control Sidebar -->
