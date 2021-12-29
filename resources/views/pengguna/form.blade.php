@@ -17,7 +17,7 @@
 
                     <div class="box-body">
                         <div class="form-group">
-                            <label >Name</label>
+                            <label >Nama</label>
                             <input type="text" class="form-control" id="nama" name="name"  autofocus required>
                             <span class="help-block with-errors"></span>
                         </div>
@@ -35,7 +35,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label >Role</label>
+                            <label >Peran</label>
                             <select class="form-control" name="role" id="role" required>
                               <option value="admin">Admin</option>
                               <option value="staff">Staff</option>

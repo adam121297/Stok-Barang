@@ -17,25 +17,25 @@
 
                     <div class="box-body">
                         <div class="form-group">
-                            <label >Products</label>
+                            <label >Produk</label>
                             {!! Form::select('product_id', $products, null, ['class' => 'form-control select', 'placeholder' => '-- Choose Product --', 'id' => 'product_id', 'required']) !!}
                             <span class="help-block with-errors"></span>
                         </div>
 
                         <div class="form-group">
-                            <label >Customer</label>
+                            <label >Pelanggan</label>
                             {!! Form::select('customer_id', $customers, null, ['class' => 'form-control select', 'placeholder' => '-- Choose Customer --', 'id' => 'customer_id', 'required']) !!}
                             <span class="help-block with-errors"></span>
                         </div>
 
                         <div class="form-group">
-                            <label >Quantity</label>
+                            <label >Jumlah</label>
                             <input type="text" class="form-control" id="qty" name="qty" required>
                             <span class="help-block with-errors"></span>
                         </div>
 
                         <div class="form-group">
-                            <label >Date</label>
+                            <label >Tanggal</label>
                             <input data-date-format='yyyy-mm-dd' type="text" class="form-control" id="tanggal" name="tanggal"   required>
                             <span class="help-block with-errors"></span>
                         </div>

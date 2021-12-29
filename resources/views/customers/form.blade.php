@@ -17,13 +17,13 @@
 
                     <div class="box-body">
                         <div class="form-group">
-                            <label >Name</label>
+                            <label >Nama</label>
                             <input type="text" class="form-control" id="nama" name="nama"  autofocus required>
                             <span class="help-block with-errors"></span>
                         </div>
 
                         <div class="form-group">
-                            <label >Address</label>
+                            <label >Alamat</label>
                             <input type="text" class="form-control" id="alamat" name="alamat"   required>
                             <span class="help-block with-errors"></span>
                         </div>
@@ -35,7 +35,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label >Phone</label>
+                            <label >No.HP</label>
                             <input type="text" class="form-control" id="telepon" name="telepon"   required>
                             <span class="help-block with-errors"></span>
                         </div>
