@@ -12,7 +12,7 @@
             <div class="inner">
                 <h3>{{ \App\User::count() }}</h3>
 
-                <p>Pengguna 1</p>
+                <p>Pengguna</p>
             </div>
             <div class="icon">
                 <i class="ion ion-person-stalker"></i>
