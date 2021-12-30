@@ -173,7 +173,7 @@
             $('input[name=_method]').val('POST');
             $('#modal-form').modal('show');
             $('#modal-form form')[0].reset();
-            $('.modal-title').text('Add Products In');
+            $('.modal-title').text('Tambahkan Produk Masuk');
         }
 
         function editForm(id) {
