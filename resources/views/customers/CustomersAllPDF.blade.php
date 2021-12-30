@@ -42,10 +42,10 @@
 <table id="categories" width="100%">
     <thead>
     <tr>
-        <td>ID</td>
-        <td>Name</td>
-        <td>Address</td>
-        <td>Email</td>
+        <td>No</td>
+        <td>Nama Lengkap</td>
+        <td>Alamat</td>
+        <td>Alamat Email</td>
     </tr>
     </thead>
     @foreach($customers as $c)
@@ -70,5 +70,3 @@
 {{--<script src="{{  asset('assets/dist/js/adminlte.min.js') }}"></script>--}}
 {{--</body>--}}
 {{--</html>--}}
-
-
