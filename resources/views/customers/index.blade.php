@@ -92,7 +92,7 @@
             $('input[name=_method]').val('POST');
             $('#modal-form').modal('show');
             $('#modal-form form')[0].reset();
-            $('.modal-title').text('Add Customers');
+            $('.modal-title').text('Tambahkan Pelanggan');
         }
 
         function editForm(id) {

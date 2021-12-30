@@ -80,7 +80,7 @@
             $('input[name=_method]').val('POST');
             $('#modal-form').modal('show');
             $('#modal-form form')[0].reset();
-            $('.modal-title').text('Add Categories');
+            $('.modal-title').text('Tambahkan Kategori');
         }
 
         function editForm(id) {
