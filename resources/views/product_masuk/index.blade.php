@@ -82,7 +82,7 @@
                     <td>{{ $i->qty }}</td>
                     <td>{{ $i->tanggal }}</td>
                     <td>
-                        <a href="{{ route('exportPDF.productMasuk', [ 'id' => $i->id ]) }}" class="btn btn-sm btn-danger">Export PDF</a>
+                        <a href="{{ route('exportPDF.productMasuk', [ 'id' => $i->id ]) }}" class="btn btn-sm btn-danger">Ekspor PDF</a>
                     </td>
                     </tbody>
                 @endforeach

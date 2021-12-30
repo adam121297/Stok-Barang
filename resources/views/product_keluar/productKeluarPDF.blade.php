@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>A simple, clean, and responsive HTML invoice template</title>
+    <title>Faktur Produk Keluar Aqua Fish</title>
 
 
 </head>
@@ -26,7 +26,7 @@
                 <table>
                     <tr>
                         <td class="title">
-                            <img src="https://www.sparksuite.com/images/logo.png" style="width:100%; max-width:300px;">
+                            <img src="https://i.postimg.cc/jjmWPDMR/PDF-Aqua-Fish-1.png" style="width:100%; max-width:300px;">
                         </td>
                     </tr>
                 </table>
@@ -77,7 +77,7 @@
 
     <table border="0" width="80%">
         <tr align="right">
-            <td><img src="https://upload.wikimedia.org/wikipedia/en/f/f4/Timothy_Spall_Signature.png" width="100px" height="100px"></td>
+            <td><img src="https://i.postimg.cc/jjmWPDMR/PDF-Aqua-Fish-1.png" width="100px"></td>
         </tr>
 
     </table>
