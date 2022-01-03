@@ -10,17 +10,41 @@
 
 
 </head>
-<body>
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>A simple, clean, and responsive HTML invoice template</title>
 
-<div class="offset-xl-2 col-xl-8 col-lg-12 col-md-12 col-sm-12 padding">
-    <div class="card">
-        <div class="card-header p-4">
-            <a href="#" class="pt-2 d-inline-block">BBBootstrap.com</a>
-            <div class="float-right">
-                <h3 class="mb-0">Invoice #BBB09090</h3>
-                Date: 12 Jun,2019
-            </div>
-        </div>
+
+</head>
+
+<style>
+    #table-data {
+        border-collapse: collapse;
+        padding: 3px;
+    }
+
+    #table-data td, #table-data th {
+        border: 1px solid black;
+    }
+</style>
+
+<body>
+<div class="invoice-box">
+    <table cellpadding="0" cellspacing="0">
+        <tr class="top">
+            <td colspan="2">
+                <table>
+                    <tr>
+                        <td class="title">
+                            <img src="https://www.sparksuite.com/images/logo.png" style="width:100%; max-width:300px;">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
 
         <div class="card-body">
             <div class="row mb-4">
