@@ -1,13 +1,6 @@
 <!doctype html>
 <html>
 <head>
-    <title>BBBootstrap.com</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
-    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js'></script>
-    <link rel="stylesheet" href='https://use.fontawesome.com/releases/v5.7.2/css/all.css'>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-    <link rel="stylesheet" href="style.css"
-
 
 </head>
 <!doctype html>
@@ -38,7 +31,7 @@
                 <table>
                     <tr>
                         <td class="title">
-                            <img src="https://www.sparksuite.com/images/logo.png" style="width:100%; max-width:300px;">
+                            <img src="https://i.postimg.cc/gJwn4XK4/PDF-Aqua-Fish-1.png" style="width:100%; max-width:300px;">
                         </td>
                     </tr>
                 </table>
