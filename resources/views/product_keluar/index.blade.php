@@ -202,7 +202,7 @@
         function deleteData(id){
             var csrf_token = $('meta[name="csrf-token"]').attr('content');
             swal({
-                title: 'Are you sure?',
+                title: 'Apa kamu yakin?',
                 text: "You won't be able to revert this!",
                 type: 'warning',
                 showCancelButton: true,
