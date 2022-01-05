@@ -18,19 +18,19 @@
                     <div class="box-body">
                         <div class="form-group">
                             <label >Produk</label>
-                            {!! Form::select('product_id', $products, null, ['class' => 'form-control select', 'placeholder' => '-- Choose Product --', 'id' => 'product_id', 'required']) !!}
+                            {!! Form::select('product_id', $products, null, ['class' => 'form-control select', 'placeholder' => '-- Pilih Produk --', 'id' => 'product_id', 'required']) !!}
                             <span class="help-block with-errors"></span>
                         </div>
 
                         <div class="form-group">
                             <label >Pelanggan</label>
-                            {!! Form::select('customer_id', $customers, null, ['class' => 'form-control select', 'placeholder' => '-- Choose Customer --', 'id' => 'customer_id', 'required']) !!}
+                            {!! Form::select('customer_id', $customers, null, ['class' => 'form-control select', 'placeholder' => '-- Pilih Pelanggan --', 'id' => 'customer_id', 'required']) !!}
                             <span class="help-block with-errors"></span>
                         </div>
 
                         <div class="form-group">
                             <label >Jumlah</label>
-                            <input type="text" class="form-control" id="qty" name="qty" required>
+                            <input type="text" class="form-control" id="qty" name="qty" placeholder="Jumlah Harus Sesuai dengan Stok Barang pada Menu Produk" required>
                             <span class="help-block with-errors"></span>
                         </div>
 
