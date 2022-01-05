@@ -145,7 +145,7 @@ class PeopleController extends Controller
             ->addColumn('action', function($pengguna){
                 return
                     '<a onclick="editForm('. $pengguna->id .')" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i> Edit</a> ' .
-                    '<a onclick="deleteData('. $pengguna->id .')" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i> Delete</a>';
+                    '<a onclick="deleteData('. $pengguna->id .')" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i> Hapus</a>';
             })
             ->rawColumns(['action'])->make(true);
     }
@@ -161,9 +161,9 @@ class PeopleController extends Controller
             //UPLOAD FILE
             $file = $request->file('file'); //GET FILE
             Excel::import(new CustomersImport, $file); //IMPORT FILE
-            return redirect()->back()->with(['success' => 'Upload file data customers !']);
+            return redirect()->back()->with(['success' => 'Unggah data pelanggan !']);
         }
 
-        return redirect()->back()->with(['error' => 'Please choose file before!']);
+        return redirect()->back()->with(['error' => 'Pilih berkas terlebih dahulu!']);
     }
 }

@@ -58,7 +58,7 @@ class SupplierController extends Controller
 
         return response()->json([
             'success'    => true,
-            'message'    => 'Suppliers Created'
+            'message'    => 'Pemasok berhasil ditambahkan'
         ]);
 
     }
@@ -108,7 +108,7 @@ class SupplierController extends Controller
 
         return response()->json([
             'success'    => true,
-            'message'    => 'Supplier Updated'
+            'message'    => 'Pemasok berhasil diedit'
         ]);
     }
 
@@ -124,7 +124,7 @@ class SupplierController extends Controller
 
         return response()->json([
             'success'    => true,
-            'message'    => 'Supplier Delete'
+            'message'    => 'Pemasok berhasil dihapus'
         ]);
     }
 
@@ -134,9 +134,9 @@ class SupplierController extends Controller
 
         return Datatables::of($suppliers)
             ->addColumn('action', function($suppliers){
-                return '<a href="#" class="btn btn-info btn-xs"><i class="glyphicon glyphicon-eye-open"></i> Show</a> ' .
+                return
                     '<a onclick="editForm('. $suppliers->id .')" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i> Edit</a> ' .
-                    '<a onclick="deleteData('. $suppliers->id .')" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i> Delete</a>';
+                    '<a onclick="deleteData('. $suppliers->id .')" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i> Hapus</a>';
             })
             ->rawColumns(['action'])->make(true);
     }
@@ -152,10 +152,10 @@ class SupplierController extends Controller
             //UPLOAD FILE
             $file = $request->file('file'); //GET FILE
             Excel::import(new SuppliersImport, $file); //IMPORT FILE
-            return redirect()->back()->with(['success' => 'Upload file data suppliers !']);
+            return redirect()->back()->with(['success' => 'Unggah data pelanggan !']);
         }
 
-        return redirect()->back()->with(['error' => 'Please choose file before!']);
+        return redirect()->back()->with(['error' => 'Pilih berkas terlebih dahulu!']);
     }
 
     public function exportSuppliersAll()

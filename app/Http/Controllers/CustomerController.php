@@ -57,7 +57,7 @@ class CustomerController extends Controller
 
         return response()->json([
             'success'    => true,
-            'message'    => 'Customer Created'
+            'message'    => 'Pelanggan berhasil ditambahkan'
         ]);
 
     }
@@ -107,7 +107,7 @@ class CustomerController extends Controller
 
         return response()->json([
             'success'    => true,
-            'message'    => 'Pelanggan Berhasil diedit'
+            'message'    => 'Pelanggan berhasil diedit'
         ]);
     }
 
