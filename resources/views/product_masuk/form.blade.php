@@ -18,13 +18,13 @@
                     <div class="box-body">
                         <div class="form-group">
                             <label >Produk</label>
-                            {!! Form::select('product_id', $products, null, ['class' => 'form-control select', 'placeholder' => '-- Choose Product --', 'id' => 'product_id', 'required']) !!}
+                            {!! Form::select('product_id', $products, null, ['class' => 'form-control select', 'placeholder' => '-- Pilih Produk --', 'id' => 'product_id', 'required']) !!}
                             <span class="help-block with-errors"></span>
                         </div>
 
                         <div class="form-group">
                             <label >Pemasok</label>
-                            {!! Form::select('supplier_id', $suppliers, null, ['class' => 'form-control select', 'placeholder' => '-- Choose Supplier --', 'id' => 'supplier_id', 'required']) !!}
+                            {!! Form::select('supplier_id', $suppliers, null, ['class' => 'form-control select', 'placeholder' => '-- Pilih Pemasok --', 'id' => 'supplier_id', 'required']) !!}
                             <span class="help-block with-errors"></span>
                         </div>
 
@@ -47,7 +47,7 @@
 
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Batal</button>
-                    <button type="submit" class="btn btn-primary">Simpan</button>
+                    <button type="submit" onclick="this.style.visibility = 'hidden'" class="btn btn-primary">Simpan</button>
                 </div>
 
             </form>

@@ -88,7 +88,7 @@ class ProductKeluarController extends Controller
 
           return response()->json([
               'success'    => true,
-              'message'    => 'Products Out Created'
+              'message'    => 'Produk berhasil Disimpan'
           ]);
         }
         // //
@@ -142,7 +142,7 @@ class ProductKeluarController extends Controller
 
         return response()->json([
             'success'    => true,
-            'message'    => 'Product Out Updated'
+            'message'    => 'Produk berhasil diedit'
         ]);
     }
 
@@ -165,7 +165,7 @@ class ProductKeluarController extends Controller
 
         return response()->json([
             'success'    => true,
-            'message'    => 'Products Delete Deleted'
+            'message'    => 'Produk berhasil dihapus'
         ]);
     }
 
