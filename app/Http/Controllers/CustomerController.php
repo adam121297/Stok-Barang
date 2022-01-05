@@ -57,7 +57,7 @@ class CustomerController extends Controller
 
         return response()->json([
             'success'    => true,
-            'message'    => 'Customer Created'
+            'message'    => 'Pelanggan berhasil disimpan'
         ]);
 
     }
@@ -107,7 +107,7 @@ class CustomerController extends Controller
 
         return response()->json([
             'success'    => true,
-            'message'    => 'Customer Updated'
+            'message'    => 'Pelanggan berhasil diedit'
         ]);
     }
 
@@ -123,7 +123,7 @@ class CustomerController extends Controller
 
         return response()->json([
             'success'    => true,
-            'message'    => 'Customer Delete'
+            'message'    => 'Pelanggan terhapus'
         ]);
     }
 
@@ -133,9 +133,9 @@ class CustomerController extends Controller
 
         return Datatables::of($customer)
             ->addColumn('action', function($customer){
-                return 
-                    '<a onclick="editForm('. $customer->id .')" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i> Edit</a> ' .
-                    '<a onclick="deleteData('. $customer->id .')" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i> Delete</a>';
+                return
+                    '<a onclick="editForm('. $customer->id .')" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i> Edit </a> ' .
+                    '<a onclick="deleteData('. $customer->id .')" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i> Hapus </a>';
             })
             ->rawColumns(['action'])->make(true);
     }
@@ -151,10 +151,10 @@ class CustomerController extends Controller
             //UPLOAD FILE
             $file = $request->file('file'); //GET FILE
             Excel::import(new CustomersImport, $file); //IMPORT FILE
-            return redirect()->back()->with(['success' => 'Upload file data customers !']);
+            return redirect()->back()->with(['success' => 'Data Pelanggan telah disimpan !']);
         }
 
-        return redirect()->back()->with(['error' => 'Please choose file before!']);
+        return redirect()->back()->with(['error' => 'Pilih berkas terlebih dahulu!']);
     }
 
 

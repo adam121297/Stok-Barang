@@ -100,7 +100,7 @@
             $('input[name=_method]').val('PATCH');
             $('#modal-form form')[0].reset();
             $.ajax({
-                url: "{{ url('pengguna') }}" + '/' + id + "/edit",
+                url: "{{ url('customers') }}" + '/' + id + "/edit",
                 type: "GET",
                 dataType: "JSON",
                 success: function(data) {
