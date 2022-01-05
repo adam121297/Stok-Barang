@@ -8,6 +8,7 @@ use App\Exports\ExportProdukKeluar;
 use App\Product;
 use App\Product_Keluar;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Yajra\DataTables\DataTables;
 use PDF;
 
@@ -58,21 +59,39 @@ class ProductKeluarController extends Controller
         $this->validate($request, [
            'product_id'     => 'required',
            'customer_id'    => 'required',
-           'qty'            => 'required',
+           'qty'            => 'required|min:0',
            'tanggal'           => 'required'
         ]);
 
-        Product_Keluar::create($request->all());
 
-        $product = Product::findOrFail($request->product_id);
-        $product->qty -= $request->qty;
-        $product->save();
+        // $produk = DB::table('product')
+        //     ->select('qty')
+        //     ->where('id', $request->product_id)
+        //     ->get()
+        //     ->first();
+        //
+        $id_produk = $request->product_id;
+        $produk = Product::find($id_produk)->first();
+        // $perbandingan =
+        // // return $produk;
+        if ($produk->qty < $request->qty) {
+          return response()->json([
+              'status'    => error
+              // 'message'    => 'Products Out Created'
+          ]);
+        }else {
+          Product_Keluar::create($request->all());
 
-        return response()->json([
-            'success'    => true,
-            'message'    => 'Products Out Created'
-        ]);
+          $product = Product::findOrFail($request->product_id);
+          $product->qty -= $request->qty;
+          $product->save();
 
+          return response()->json([
+              'success'    => true,
+              'message'    => 'Products Out Created'
+          ]);
+        }
+        // //
     }
 
     /**
@@ -135,6 +154,13 @@ class ProductKeluarController extends Controller
      */
     public function destroy($id)
     {
+
+        $product_keluar1 = Product_Keluar::find($id)->product_id;
+        $product_qty = Product_Keluar::find($id);
+        $product = Product::findOrFail($product_keluar1);
+        $product->qty += $product_qty->qty;
+        $product->update();
+
         Product_Keluar::destroy($id);
 
         return response()->json([
@@ -156,8 +182,7 @@ class ProductKeluarController extends Controller
                 return $product->customer->nama;
             })
             ->addColumn('action', function($product){
-                return 
-                    '<a onclick="editForm('. $product->id .')" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i> Edit</a> ' .
+                return
                     '<a onclick="deleteData('. $product->id .')" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i> Hapus</a>';
             })
             ->rawColumns(['products_name','customer_name','action'])->make(true);
