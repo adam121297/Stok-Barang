@@ -18,19 +18,19 @@
                     <div class="box-body">
                         <div class="form-group">
                             <label >Nama</label>
-                            <input type="text" class="form-control" id="nama" name="name"  autofocus required>
+                            <input type="text" class="form-control" id="nama" name="name" placeholder="John Doe" autofocus required>
                             <span class="help-block with-errors"></span>
                         </div>
 
                         <div class="form-group">
                             <label >Password</label>
-                            <input type="password" class="form-control" id="password" name="password" required>
+                            <input type="password" class="form-control" id="password" name="password"  required>
                             <span class="help-block with-errors"></span>
                         </div>
 
                         <div class="form-group">
                             <label >Email</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="John.Doe@mail.com" required>
                             <span class="help-block with-errors"></span>
                         </div>
 

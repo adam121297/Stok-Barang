@@ -93,13 +93,13 @@
                 dataType: "JSON",
                 success: function(data) {
                     $('#modal-form').modal('show');
-                    $('.modal-title').text('Edit Categories');
+                    $('.modal-title').text('Edit Kategori');
 
                     $('#id').val(data.id);
                     $('#name').val(data.name);
                 },
                 error : function() {
-                    alert("Nothing Data");
+                    alert("Data Tidak Ditemukan");
                 }
             });
         }
@@ -123,7 +123,7 @@
                     success : function(data) {
                         table.ajax.reload();
                         swal({
-                            title: 'Success!',
+                            title: 'Sukses!',
                             text: data.message,
                             type: 'success',
                             timer: '1500'
@@ -160,7 +160,7 @@
                             $('#modal-form').modal('hide');
                             table.ajax.reload();
                             swal({
-                                title: 'Success!',
+                                title: 'Sukses!',
                                 text: data.message,
                                 type: 'success',
                                 timer: '1500'

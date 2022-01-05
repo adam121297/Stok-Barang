@@ -70,7 +70,7 @@ class ProductMasukController extends Controller
 
         return response()->json([
             'success'    => true,
-            'message'    => 'Products In Created'
+            'message'    => 'Produk berhasil ditambahkan'
         ]);
 
     }
@@ -123,7 +123,7 @@ class ProductMasukController extends Controller
 
         return response()->json([
             'success'    => true,
-            'message'    => 'Product In Updated'
+            'message'    => 'Produk berhasil diedit'
         ]);
     }
 
@@ -139,7 +139,7 @@ class ProductMasukController extends Controller
 
         return response()->json([
             'success'    => true,
-            'message'    => 'Products In Deleted'
+            'message'    => 'Produk berhasil terhapus'
         ]);
     }
 
@@ -156,8 +156,8 @@ class ProductMasukController extends Controller
                 return $product->supplier->nama;
             })
             ->addColumn('action', function($product){
-                return 
-                    '<a onclick="deleteData('. $product->id .')" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i> Delete</a> ';
+                return
+                    '<a onclick="deleteData('. $product->id .')" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i> Hapus</a> ';
 
 
             })

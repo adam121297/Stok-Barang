@@ -30,7 +30,7 @@
 
                         <div class="form-group">
                             <label >Jumlah</label>
-                            <input type="text" class="form-control" id="qty" name="qty" required>
+                            <input type="text" class="form-control" id="qty" name="qty" placeholder="100" required>
                             <span class="help-block with-errors"></span>
                         </div>
 

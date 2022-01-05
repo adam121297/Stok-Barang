@@ -185,7 +185,7 @@
                 dataType: "JSON",
                 success: function(data) {
                     $('#modal-form').modal('show');
-                    $('.modal-title').text('Edit Products');
+                    $('.modal-title').text('Edit Produk Keluar');
 
                     $('#id').val(data.id);
                     $('#product_id').val(data.product_id);

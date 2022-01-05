@@ -11,7 +11,6 @@
 
         <div class="box-header">
             <h3 class="box-title">Data Produk</h3>
-
             <a onclick="addForm()" class="btn btn-primary pull-right" style="margin-top: -8px;">Tambahkan Produk</a>
         </div>
 
@@ -97,7 +96,7 @@
                 dataType: "JSON",
                 success: function(data) {
                     $('#modal-form').modal('show');
-                    $('.modal-title').text('Edit Products');
+                    $('.modal-title').text('Edit Produk');
 
                     $('#id').val(data.id);
                     $('#nama').val(data.nama);
@@ -106,7 +105,7 @@
                     $('#category_id').val(data.category_id);
                 },
                 error : function() {
-                    alert("Nothing Data");
+                    alert("Data Tidak Ditemukan");
                 }
             });
         }
@@ -130,7 +129,7 @@
                     success : function(data) {
                         table.ajax.reload();
                         swal({
-                            title: 'Success!',
+                            title: 'Sukses!',
                             text: data.message,
                             type: 'success',
                             timer: '1500'
@@ -167,7 +166,7 @@
                             $('#modal-form').modal('hide');
                             table.ajax.reload();
                             swal({
-                                title: 'Success!',
+                                title: 'Sukses!',
                                 text: data.message,
                                 type: 'success',
                                 timer: '1500'

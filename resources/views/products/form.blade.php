@@ -18,19 +18,19 @@
                     <div class="box-body">
                         <div class="form-group">
                             <label >Nama</label>
-                            <input type="text" class="form-control" id="nama" name="nama"  autofocus required>
+                            <input type="text" class="form-control" id="nama" placeholder="Ikan Cupang" name="nama"  autofocus required>
                             <span class="help-block with-errors"></span>
                         </div>
 
                         <div class="form-group">
                             <label >Harga</label>
-                            <input type="text" class="form-control" id="harga" name="harga"   required>
+                            <input type="text" class="form-control" id="harga" placeholder="5000" name="harga"   required>
                             <span class="help-block with-errors"></span>
                         </div>
 
                         <div class="form-group">
                             <label >Jumlah</label>
-                            <input type="text" class="form-control" id="qty" name="qty"   required>
+                            <input type="text" class="form-control" id="qty" placeholder="10" name="qty"   required>
                             <span class="help-block with-errors"></span>
                         </div>
 
@@ -38,12 +38,13 @@
                         <div class="form-group">
                             <label >Gambar</label>
                             <input type="file" class="form-control" id="image" name="image" >
+                            <h5 style="color:red;"><i>Note: Maksimal 2 MB</i></h5>
                             <span class="help-block with-errors"></span>
                         </div>
 
                         <div class="form-group">
                             <label >Kategori</label>
-                            {!! Form::select('category_id', $category, null, ['class' => 'form-control select', 'placeholder' => '-- Choose Category --', 'id' => 'category_id', 'required']) !!}
+                            {!! Form::select('category_id', $category, null, ['class' => 'form-control select', 'placeholder' => '-- Pilih Kategori --', 'id' => 'category_id', 'required']) !!}
                             <span class="help-block with-errors"></span>
                         </div>
 

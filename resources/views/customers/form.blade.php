@@ -18,25 +18,25 @@
                     <div class="box-body">
                         <div class="form-group">
                             <label >Nama</label>
-                            <input type="text" class="form-control" id="nama" name="nama"  autofocus required>
+                            <input type="text" class="form-control" id="nama" name="nama" placeholder="John Doe"  autofocus required>
                             <span class="help-block with-errors"></span>
                         </div>
 
                         <div class="form-group">
                             <label >Alamat</label>
-                            <input type="text" class="form-control" id="alamat" name="alamat"   required>
+                            <input type="text" class="form-control" id="alamat" name="alamat"  placeholder="Tangerang, Indonesia" required>
                             <span class="help-block with-errors"></span>
                         </div>
 
                         <div class="form-group">
                             <label >Email</label>
-                            <input type="email" class="form-control" id="email" name="email"   required>
+                            <input type="email" class="form-control" id="email" name="email"  placeholder="John.doe@mail.com" required>
                             <span class="help-block with-errors"></span>
                         </div>
 
                         <div class="form-group">
                             <label >No.HP</label>
-                            <input type="text" class="form-control" id="telepon" name="telepon"   required>
+                            <input type="text" class="form-control" id="telepon" name="telepon" placeholder="08123456789"  required>
                             <span class="help-block with-errors"></span>
                         </div>
 

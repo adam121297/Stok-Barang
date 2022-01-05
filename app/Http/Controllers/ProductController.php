@@ -54,7 +54,7 @@ class ProductController extends Controller
             'nama'          => 'required|string',
             'harga'         => 'required',
             'qty'           => 'required',
-            'image'         => 'required',
+            'image'         => 'required|max:2048',
             'category_id'   => 'required',
         ]);
 
