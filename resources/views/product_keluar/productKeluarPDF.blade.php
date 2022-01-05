@@ -1,142 +1,182 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
+	<head>
+		<meta charset="utf-8" />
+		<title>Nota Pembelian - Home Aqua Fish</title>
+		<style>
+    .invoice-box {
+				max-width: 800px;
+				margin: auto;
+				padding: 30px;
+				border: 1px solid #eee;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+				font-size: 16px;
+				line-height: 24px;
+				font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+				color: #555;
+			}
 
-</head>
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>A simple, clean, and responsive HTML invoice template</title>
+    .invoice-box table {
+				width: 660px;
+				/* line-height: inherit; */
+				text-align: left;
+			}
+
+    .invoice-box table td {
+  				padding: 5px;
+  				vertical-align: top;
+  			}
+
+    .invoice-box table tr td:nth-child(2) {
+    				text-align: right;
+    		}
+
+    .invoice-box table tr.top table td {
+    				padding-bottom: 20px;
+    		}
+
+    .invoice-box table tr.top table td.title {
+    				font-size: 45px;
+    				line-height: 45px;
+    				color: #333;
+    		}
+
+    .invoice-box table tr.information table td {
+    				padding-bottom: 40px;
+    		}
+
+    .invoice-box table tr.heading td {
+    				background: #eee;
+    				border-bottom: 1px solid #ddd;
+    				font-weight: bold;
+    	  }
+
+    .invoice-box table tr.details td {
+  				padding-bottom: 20px;
+  			}
+
+  	.invoice-box table tr.item td {
+  				border-bottom: 1px solid #eee;
+  			}
+
+  	.invoice-box table tr.item.last td {
+  				border-bottom: none;
+  			}
+
+    .invoice-box table tr.total td:nth-child(2) {
+    				border-top: 2px solid #eee;
+    				font-weight: bold;
+    			}
+
+    			@media only screen and (max-width: 600px) {
+    				.invoice-box table tr.top table td {
+    					width: 100%;
+    					display: block;
+    					text-align: center;
+    				}
+
+    				.invoice-box table tr.information table td {
+    					width: 100%;
+    					display: block;
+    					text-align: center;
+    				}
+
+          }
+
+			/** RTL **/
+			.invoice-box.rtl {
+				direction: rtl;
+				font-family: Tahoma, 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+			}
+
+			.invoice-box.rtl table {
+				text-align: right;
+			}
+
+			.invoice-box.rtl table tr td:nth-child(2) {
+				text-align: left;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<div class="invoice-box">
+			<table cellpadding="0" cellspacing="0">
+				<tr class="top">
+					<td colspan="2">
+						<table>
+							<tr>
+								<td class="title">
+									<img src="https://i.ibb.co/cxvZYRM/logomiring-AF.png" style="width: 100%; max-width: 300px" />
+								</td>
+
+								<td>
+									ID Nota: {{ $product_keluar->id }}<br />
+									Waktu: {{ $product_keluar->tanggal }}<br />
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+
+				<tr class="information">
+					<td colspan="2">
+						<table>
+							<tr>
+								<td>
+									Home Aqua Fish<br />
+									Tangerang<br />
+									Indonesia
+								</td>
+
+								<td>
+									Pelanggan : <br />
+									{{ $product_keluar->customer->nama }}<br />
+                  {{ $product_keluar->customer->telepon }}<br />
+                  {{ $product_keluar->customer->email }}<br />
+									{{ $product_keluar->customer->alamat }}<br />
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+
+				<tr class="heading">
+					<td>Produk</td>
+
+					<td>Jumlah</td>
+				</tr>
+
+				<tr class="item">
+					<td>{{ $product_keluar->product->nama }}</td>
+
+					<td>{{ $product_keluar->qty }}</td>
+				</tr>
+			</table>
+    </br>
+    </br>
+    </br>
+      {{--<hr  size="2px" color="black" align="left" width="45%">--}}
 
 
-</head>
+      <table border="0" width="80%">
+          <tr align="right">
+              <td>Hormat Kami</td>
+          </tr>
+      </table>
 
-<style>
-    #table-data {
-        border-collapse: collapse;
-        padding: 3px;
-    }
+      <table border="0" width="80%">
+          <tr align="right">
+              <td><img src="https://i.ibb.co/ZBPyDgy/stample-AF1.png" width="120px" height="100px"></td>
+          </tr>
 
-    #table-data td, #table-data th {
-        border: 1px solid black;
-    }
-</style>
-
-<body>
-<div class="invoice-box">
-    <table cellpadding="0" cellspacing="0">
-        <tr class="top">
-            <td colspan="2">
-                <table>
-                    <tr>
-                        <td class="title">
-                            <img src="https://i.postimg.cc/gJwn4XK4/PDF-Aqua-Fish-1.png" style="width:100%; max-width:300px;">
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
-
-        <div class="card-body">
-            <div class="row mb-4">
-                <div class="col-sm-6">
-                    <h5 class="mb-3">From:</h5>
-                    <h3 class="text-dark mb-1">Tejinder Singh</h3>
-                    <div>29, Singla Street</div>
-                    <div>Sikeston,New Delhi 110034</div>
-                    <div>Email: contact@bbbootstrap.com</div>
-                    <div>Phone: +91 9897 989 989</div>
-                </div>
-
-                <div class="col-sm-6 ">
-                    <h5 class="mb-3">To:</h5>
-                    <h3 class="text-dark mb-1">Sanjat Singh</h3>
-                    <div>629, Teeru Street</div>
-                    <div>Chandni chowk, New delhi, 110006</div>
-                    <div>Email: contact@tunhi.com</div>
-                    <div>Phone: +91 9895 344 390</div>
-
-
-                </div>
-
-            </div>
-
-            <div class="table-responsive-sm">
-                <table class="table table-striped">
-                    <table border="0" id="table-data" width="80%">
-            <tr>
-                <td width="70px">Invoice ID</td>
-                <td width="">: {{ $product_keluar->id }}</td>
-                <td width="30px">Created</td>
-                <td>: {{ $product_keluar->tanggal }}</td>
-            </tr>
-
-            <tr>
-                <td>Telepon</td>
-                <td>: {{ $product_keluar->customer->telepon }}</td>
-                <td>Alamat</td>
-                <td>: {{ $product_keluar->customer->alamat }}</td>
-            </tr>
-
-            <tr>
-                <td>Nama</td>
-                <td>: {{ $product_keluar->customer->nama }}</td>
-                <td>Email</td>
-                <td>: {{ $product_keluar->customer->email }}</td>
-            </tr>
-
-            <tr>
-                <td>Product</td>
-                <td >: {{ $product_keluar->product->nama }}</td>
-                <td>Quantity</td>
-                <td >: {{ $product_keluar->qty }}</td>
-            </tr>
-
-        </table>
-
-                    </tbody>
-
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-sm-5">
-                </div>
-                <div class="col-lg-4 col-sm-5 ml-auto">
-                    <table class="table table-clear">
-                        <tbody>
-                            <tr>
-                                <td class="left">
-                                    <strong class="text-dark">Subtotal</strong>
-                                </td>
-                                <td class="right">$28,809,00</td>
-                            </tr>
-                            <tr>
-                                <td class="left">
-                                    <strong class="text-dark">Discount (20%)</strong>
-                                </td>
-                                <td class="right">$5,761,00</td>
-                            </tr>
-                            <tr>
-                                <td class="left">
-                                    <strong class="text-dark">VAT (10%)</strong>
-                                </td>
-                                <td class="right">$2,304,00</td>
-                            </tr>
-                            <tr>
-                                <td class="left">
-                                    <strong class="text-dark">Total</strong> </td>
-                                <td class="right">
-                                    <strong class="text-dark">$20,744,00</strong>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <div class="card-footer bg-white">
-            <p class="mb-0">BBBootstrap.com, Sounth Block, New delhi, 110034</p>
-        </div>
-    </div>
-</div>
+      </table>
+      <table border="0" width="80%">
+          <tr align="right">
+              <td>Home Aquafish</td>
+          </tr>
+      </table>
+		</div>
+	</body>
+</html>
