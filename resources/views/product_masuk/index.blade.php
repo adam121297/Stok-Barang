@@ -203,13 +203,14 @@
         function deleteData(id){
             var csrf_token = $('meta[name="csrf-token"]').attr('content');
             swal({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
+              title: 'Apa kamu yakin?',
+              text: "Kamu tidak akan dapat mengembalikannya lagi!",
                 type: 'warning',
                 showCancelButton: true,
+                cancelButtonText: 'Batalkan',
                 cancelButtonColor: '#d33',
                 confirmButtonColor: '#3085d6',
-                confirmButtonText: 'Yes, delete it!'
+                confirmButtonText: 'Ya, hapus!'
             }).then(function () {
                 $.ajax({
                     url : "{{ url('productsIn') }}" + '/' + id,

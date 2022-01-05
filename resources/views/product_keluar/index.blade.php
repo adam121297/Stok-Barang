@@ -206,6 +206,7 @@
                 text: "Kamu tidak akan dapat mengembalikannya lagi!",
                 type: 'warning',
                 showCancelButton: true,
+                cancelButtonText: 'Batalkan',
                 cancelButtonColor: '#d33',
                 confirmButtonColor: '#3085d6',
                 confirmButtonText: 'Ya, hapus!'
