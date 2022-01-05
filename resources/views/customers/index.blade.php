@@ -114,7 +114,7 @@
                     $('#telepon').val(data.telepon);
                 },
                 error : function() {
-                    alert("Nothing Data");
+                    alert("Data tidak ditemukan");
                 }
             });
         }
@@ -137,7 +137,7 @@
                     success : function(data) {
                         table.ajax.reload();
                         swal({
-                            title: 'Success!',
+                            title: 'Sukses!',
                             text: data.message,
                             type: 'success',
                             timer: '1500'
@@ -174,7 +174,7 @@
                             $('#modal-form').modal('hide');
                             table.ajax.reload();
                             swal({
-                                title: 'Success!',
+                                title: 'Sukses!',
                                 text: data.message,
                                 type: 'success',
                                 timer: '1500'
