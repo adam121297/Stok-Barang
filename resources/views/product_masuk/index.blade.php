@@ -193,9 +193,10 @@
                     $('#supplier_id').val(data.supplier_id);
                     $('#qty').val(data.qty);
                     $('#tanggal').val(data.tanggal);
+                    location.reload();
                 },
                 error : function() {
-                    alert("Nothing Data");
+                    alert("Data tidak ditemukan");
                 }
             });
         }
@@ -219,11 +220,12 @@
                     success : function(data) {
                         table.ajax.reload();
                         swal({
-                            title: 'Success!',
+                            title: 'Sukses!',
                             text: data.message,
                             type: 'success',
                             timer: '1500'
                         })
+                        location.reload();
                     },
                     error : function () {
                         swal({
@@ -256,11 +258,12 @@
                             $('#modal-form').modal('hide');
                             table.ajax.reload();
                             swal({
-                                title: 'Success!',
+                                title: 'Sukses!',
                                 text: data.message,
                                 type: 'success',
                                 timer: '1500'
                             })
+                            location.reload();
                         },
                         error : function(data){
                             swal({
