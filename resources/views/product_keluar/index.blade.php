@@ -192,6 +192,7 @@
                     $('#customer_id').val(data.customer_id);
                     $('#qty').val(data.qty);
                     $('#tanggal').val(data.tanggal);
+                    location.reload();
                 },
                 error : function() {
                     alert("Nothing Data");
@@ -223,6 +224,7 @@
                             type: 'success',
                             timer: '1500'
                         })
+                        location.reload();
                     },
                     error : function () {
                         swal({
@@ -260,6 +262,7 @@
                                 type: 'success',
                                 timer: '1500'
                             })
+                            location.reload();
                         },
                         error : function(data){
                             swal({
