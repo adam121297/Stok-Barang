@@ -203,12 +203,12 @@
             var csrf_token = $('meta[name="csrf-token"]').attr('content');
             swal({
                 title: 'Apa kamu yakin?',
-                text: "You won't be able to revert this!",
+                text: "Kamu tidak akan dapat mengembalikannya lagi!",
                 type: 'warning',
                 showCancelButton: true,
                 cancelButtonColor: '#d33',
                 confirmButtonColor: '#3085d6',
-                confirmButtonText: 'Yes, delete it!'
+                confirmButtonText: 'Ya, hapus!'
             }).then(function () {
                 $.ajax({
                     url : "{{ url('productsOut') }}" + '/' + id,
