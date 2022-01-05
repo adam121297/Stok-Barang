@@ -57,7 +57,7 @@ class CustomerController extends Controller
 
         return response()->json([
             'success'    => true,
-            'message'    => 'Pelanggan berhasil disimpan'
+            'message'    => 'Customer Created'
         ]);
 
     }
@@ -97,7 +97,7 @@ class CustomerController extends Controller
         $this->validate($request, [
             'nama'      => 'required|string|min:2',
             'alamat'    => 'required|string|min:2',
-            'email'     => 'required|string|email|max:255|unique:customers',
+            'email'     => 'required|string|email|max:255',
             'telepon'   => 'required|string|min:2',
         ]);
 
@@ -107,7 +107,7 @@ class CustomerController extends Controller
 
         return response()->json([
             'success'    => true,
-            'message'    => 'Pelanggan berhasil diedit'
+            'message'    => 'Pelanggan Berhasil diedit'
         ]);
     }
 
@@ -123,7 +123,7 @@ class CustomerController extends Controller
 
         return response()->json([
             'success'    => true,
-            'message'    => 'Pelanggan terhapus'
+            'message'    => 'Pelanggan Berhasil dihapus'
         ]);
     }
 
@@ -134,8 +134,8 @@ class CustomerController extends Controller
         return Datatables::of($customer)
             ->addColumn('action', function($customer){
                 return
-                    '<a onclick="editForm('. $customer->id .')" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i> Edit </a> ' .
-                    '<a onclick="deleteData('. $customer->id .')" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i> Hapus </a>';
+                    '<a onclick="editForm('. $customer->id .')" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i> Edit</a> ' .
+                    '<a onclick="deleteData('. $customer->id .')" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i> Hapus</a>';
             })
             ->rawColumns(['action'])->make(true);
     }
@@ -151,7 +151,7 @@ class CustomerController extends Controller
             //UPLOAD FILE
             $file = $request->file('file'); //GET FILE
             Excel::import(new CustomersImport, $file); //IMPORT FILE
-            return redirect()->back()->with(['success' => 'Data Pelanggan telah disimpan !']);
+            return redirect()->back()->with(['success' => 'Unggah Data Pelanggan !']);
         }
 
         return redirect()->back()->with(['error' => 'Pilih berkas terlebih dahulu!']);

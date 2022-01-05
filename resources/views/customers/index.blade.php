@@ -122,13 +122,14 @@
         function deleteData(id){
             var csrf_token = $('meta[name="csrf-token"]').attr('content');
             swal({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
+                title: 'Apakah kamu yakin?',
+                text: "Kamu tidak akan bisa mengembalikannya!",
                 type: 'warning',
                 showCancelButton: true,
                 cancelButtonColor: '#d33',
                 confirmButtonColor: '#3085d6',
-                confirmButtonText: 'Yes, delete it!'
+                confirmButtonText: 'Ya, Hapus permanen!',
+                cancelButtonText: 'Batalkan',
             }).then(function () {
                 $.ajax({
                     url : "{{ url('customers') }}" + '/' + id,
@@ -166,7 +167,7 @@
                         url : url,
                         type : "POST",
                         //hanya untuk input data tanpa dokumen
-//                      data : $('#modal-form form').serialize(),
+                     // data : $('#modal-form form').serialize(),
                         data: new FormData($("#modal-form form")[0]),
                         contentType: false,
                         processData: false,
